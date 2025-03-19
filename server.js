@@ -24,4 +24,4 @@ readdirSync("./routes").map((item) =>
 // Step 3 Router
 
 // Step 2 Start Server
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(5000, () => console.log(`Server is running on port 5000`));

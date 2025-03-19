@@ -39,7 +39,7 @@ exports.register = async (req, res) => {
 
     res.send("Register Success");
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -81,7 +81,7 @@ exports.login = async (req, res) => {
       res.json({ payload, token });
     });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };

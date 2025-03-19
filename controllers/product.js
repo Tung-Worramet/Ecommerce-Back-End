@@ -32,7 +32,7 @@ exports.create = async (req, res) => {
 
     res.send(product);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -53,7 +53,7 @@ exports.list = async (req, res) => {
 
     res.send(products);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -75,7 +75,7 @@ exports.read = async (req, res) => {
 
     res.send(products);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -115,7 +115,7 @@ exports.update = async (req, res) => {
 
     res.send(product);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -163,7 +163,7 @@ exports.remove = async (req, res) => {
 
     res.send("Removed Success");
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -180,7 +180,7 @@ exports.listby = async (req, res) => {
 
     res.send(products);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -201,7 +201,7 @@ const handleQuery = async (req, res, query) => {
 
     res.send(products);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -222,7 +222,7 @@ const handleCategory = async (req, res, categoryId) => {
 
     res.send(products);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -244,7 +244,7 @@ const handlePrice = async (req, res, priceRange) => {
 
     res.send(products);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -269,7 +269,7 @@ exports.searchFilters = async (req, res) => {
 
     // res.send("searchFilters");
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -284,7 +284,7 @@ exports.createImages = async (req, res) => {
 
     res.send(result);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: "Server Error" });
   }
 };
@@ -298,7 +298,7 @@ exports.removeImages = async (req, res) => {
       res.send("Remove Image Success");
     }); // destroy คือ ทำลาย
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };

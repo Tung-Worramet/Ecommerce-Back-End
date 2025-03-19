@@ -12,7 +12,7 @@ exports.create = async (req, res) => {
 
     res.send(category);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -22,7 +22,7 @@ exports.list = async (req, res) => {
     const categories = await prisma.category.findMany();
     res.send(categories);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -38,7 +38,7 @@ exports.remove = async (req, res) => {
     });
     res.send(category);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };

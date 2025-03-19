@@ -15,7 +15,7 @@ exports.changeOrderStatus = async (req, res) => {
 
     res.json(orderUpdate);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -41,7 +41,7 @@ exports.getOrderAdmin = async (req, res) => {
 
     res.json(orders);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };

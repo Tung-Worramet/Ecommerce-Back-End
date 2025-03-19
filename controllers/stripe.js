@@ -25,7 +25,7 @@ exports.payment = async (req, res) => {
       clientSecret: paymentIntent.client_secret,
     });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };

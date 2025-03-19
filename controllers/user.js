@@ -14,7 +14,7 @@ exports.listUsers = async (req, res) => {
 
     res.json(user);
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -34,7 +34,7 @@ exports.changeStatus = async (req, res) => {
 
     res.send("Update Status Success");
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -54,7 +54,7 @@ exports.changeRole = async (req, res) => {
 
     res.send("Update Role Success");
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -133,7 +133,7 @@ exports.userCart = async (req, res) => {
 
     res.send("Add Cart Success");
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -158,7 +158,7 @@ exports.getUserCart = async (req, res) => {
       cartTotal: cart.cartTotal,
     });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -194,7 +194,7 @@ exports.emptyCart = async (req, res) => {
       deleteCount: result.count,
     });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -214,7 +214,7 @@ exports.saveAddress = async (req, res) => {
 
     res.json({ ok: true, message: "Update Address Success" });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -286,7 +286,7 @@ exports.saveOrder = async (req, res) => {
     // console.log(update)
     res.json({ ok: true, order });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };
@@ -312,7 +312,7 @@ exports.getOrder = async (req, res) => {
 
     res.json({ ok: true, orders });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json({ message: err.message });
   }
 };

@@ -4,6 +4,7 @@ const app = express();
 const morgan = require("morgan");
 const { readdirSync } = require("fs");
 const cors = require("cors");
+const swaggerDocs = require("./config/swagger"); // Import Swagger
 
 //const authRouter = require("./routes/auth");
 
@@ -11,6 +12,9 @@ const cors = require("cors");
 app.use(morgan("dev"));
 app.use(express.json({ limit: "20mb" })); // อ่านไฟล์ Json
 app.use(cors());
+
+// นำ Swagger ไปใช้
+swaggerDocs(app);
 
 // app.use("/api", authRouter);
 readdirSync("./routes").map((item) =>
@@ -20,4 +24,4 @@ readdirSync("./routes").map((item) =>
 // Step 3 Router
 
 // Step 2 Start Server
-app.listen(5000, (req, res) => console.log("Server is running on port 5000"));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
